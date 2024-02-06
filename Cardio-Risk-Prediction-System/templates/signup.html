@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>HDPS</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style> 
+   body{
+    background-color:#263238 ;
+   }
+ </style>
+   
+</head>
+<body>
+ 
+ <div class="row">
+  
+  <div class="col s12 m4 push-m4 l3 push-l4" style= "margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);">
+
+    
+      
+  <div class="card hoverable">
+    
+    <div class="card-content grey lighten-4">
+      <form action="" id="signin" method="POST">
+
+        <h5 class="center">Signup</h5> 
+      <div>
+        <div class="input-field">
+          <i class="material-icons prefix">face</i>
+          <input required id="icon_prefix1" type="text" class="validate" required name="first_name">
+          <label for="icon_prefix1">First Name</label>
+        </div>
+
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <input required id="icon_prefix" type="text" class="validate" required name="last_name">
+          <label for="icon_prefix">Last Name</label>
+        </div>
+
+
+
+        <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" class="validate" required name="email">
+            <label for="email">Email</label>
+          </div>
+
+         
+
+          <div class="input-field">
+            <i class="material-icons prefix">assignment_ind</i>
+            <input required id="icon_prefix2" type="text" class="validate" required name="username">
+            <label for="icon_prefix2">Username</label>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="icon_email" type="password" class="validate" required name="password">
+            <label for="icon_email">Set Password</label>
+          </div>
+
+        <div>
+          <p>
+          <label>
+            &nbsp;<input type="checkbox" />
+            <span>Remember Me</span>
+          </label>
+          </p>
+        </div>
+        <br>
+        
+
+            
+            <div class="center-align">
+              {% csrf_token %}
+              <button class="blue-grey darken-4 btn  waves-effect waves-light" type="submit" name="action">Sign In
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+      </div>
+    </form>
+    
+
+    <form action="" id="signup">
+  </div>     
+
+
+     
+
+
+
+      
+
+    </form>
+    </div>
+  </div>
+ </div>
+       
+              
+       
+      
+          
+   
+      
+      
+    
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/9478bf204b.js" crossorigin="anonymous"></script>
+
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  </body>
+</html>

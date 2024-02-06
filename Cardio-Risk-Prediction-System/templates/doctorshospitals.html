@@ -1,0 +1,88 @@
+{% extends 'base_layout2.html' %}
+{% block css %}
+<style> 
+    footer {
+        padding-left: 295px;
+    }
+    .con{
+        padding-left: 390px;
+        width: 90%;
+        flex: 1 0 auto;
+    }
+    @media only screen and (max-width : 992px) {
+      .con, footer {
+        padding-left: 0;
+      }
+    }
+
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+
+
+ </style>
+{% endblock %}
+{% block content %}
+<div class="con">
+  <h5 > Here is the list of best Doctors and Hospitals for Heart Disease in CRPS. Please use the following information to get in touch.  </h5>
+  
+
+
+   
+<br>  
+
+
+  <table class="striped">
+   <thead>
+     <tr>
+         <th>S.No</th>
+         <th>Doctor Name</th>
+         <th>Hospital Name</th>
+         <th>Email</th>
+         <th>Location</th>
+         <th>Phone</th>
+       
+         <th> Action</th>
+     </tr>
+   </thead>
+
+   <tbody>
+     {% for data in datas %}
+     <tr>
+       <td>{{ forloop.counter }}</td>
+       <td>{{ data.doctor_name }}</td>
+       <td>{{ data.hospital_name }}</td>
+
+       <td>{{ data.email }}</td>
+       <td>{{ data.Location }}</td>
+       <td>{{ data.phone_no }}</td>
+      
+       <td> 
+         <a class="waves-effect waves-light btn-small black" href="https://mail.google.com/mail/?view=cm&fs=1&to={{ data.email }}" target="_blank"><i class="material-icons left">mail</i>Email Now</a> 
+      </td>
+     </tr>
+
+
+   
+
+    {% endfor %}
+
+
+
+
+
+  
+
+
+
+     
+   </tbody>
+ </table>
+       
+
+<br> <br> 
+ 
+</div>  
+{% endblock %}

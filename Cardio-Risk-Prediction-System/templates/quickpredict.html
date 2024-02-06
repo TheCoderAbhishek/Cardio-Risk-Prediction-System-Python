@@ -1,0 +1,164 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <br> <br>
+
+    <h3 class="container center"> Please fill the following data correctly. </h3>
+    <br> <br>
+     <!--  form -->
+
+
+  <div style="width: 50%;" class="row ">
+    <form class="col s12" method="POST"> 
+
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.age }}
+          <label for="a1">Age</label>
+          <span class="helper-text">Enter your age here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.sex }}
+          <label for="a2">Sex</label>
+          <span class="helper-text">Enter your sex here (0: Male, 1: Female)</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.cp }}
+          <label for="a3">Chest Pain (CP)</label>
+          <span class="helper-text">Enter your Constructive Pericarditis here (1: asymptomatic, 2: non-angina, 3: typical angina, 4: non-typical angina)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.trestbps }}
+          <label for="a4">Resting Blood Pressure (Trestbps)</label>
+          <span class="helper-text">Enter your Resting Blood Pressure here ([60 - 200] mm of Hg)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.chol }}
+          <label for="a5">Cholesterol (Chol)</label>
+          <span class="helper-text">Enter your Cholesterol here (Cholesterol Computation Range[120 - 600] mm/dl)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.fbs }}
+          <label for="a6">Fasting Blood Sugar (Fbs)</label>
+          <span class="helper-text">Enter your Fasting Blood Sugar here (1: <=120 mg/dl or 0: >120 mg/dl)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.restcg }}
+          <label for="a7">Resting Electrocardiographic Results (restcg)</label>
+          <span class="helper-text">Enter your Resting Electrocardiographic Result here (0: normal, 1: abnormal, 2: showing probable)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.thalach }}
+          <label for="a8">Maximum Heart Rate (Thalach)</label>
+          <span class="helper-text">Enter your Maximum Heart Rate Achieved here (range 50 to 220)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.exang }}
+          <label for="a9">Exercise induced angina (Exang)</label>
+          <span class="helper-text">Enter your Exercise Induced Angina here (0: No or 1: Yes)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.oldpeak }}
+          <label for="a10">ST depression induced (Oldpeak)</label>
+          <span class="helper-text">Enter your Exercise Relative to Rest here (range [0 - 6])</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.slope }}
+          <label for="a11">Slope</label>
+          <span class="helper-text">Enter your Segment/Heart Rate here (0: downsloping, 1: flat, 2: upsloping)</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.ca }}
+          <label for="a12">Number of major vessels (Ca)</label>
+          <span class="helper-text">Enter your Ca here (range [0 - 3])</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.thal }}
+          <label for="a13">Thalassemia (Thal)</label>
+          <span class="helper-text">Enter your Thalassemia here (1: fixed defect, 2: normal blood flow, 3: reversible defect)</span>
+        </div>
+      </div>
+      
+      
+      
+      {% csrf_token %}
+      <button class=" black btn waves-effect waves-light" type="submit" name="action"  > Test Now
+        <i class="material-icons right">send</i>
+      </button>
+
+
+    </form>
+      
+        
+  </div>
+
+  <br>
+
+  {% endblock %}

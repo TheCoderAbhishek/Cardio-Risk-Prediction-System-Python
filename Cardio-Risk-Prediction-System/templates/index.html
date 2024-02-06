@@ -1,0 +1,144 @@
+{% extends 'base_layout.html' %}
+  {% load static %}   
+
+
+  {% block content %}
+      <div class="slider" >
+        <ul class="slides">
+          <li>
+            <img  src="{% static 'img/background.png' %}"> 
+    
+           
+    
+            <div class="caption left-align" >
+              <br> <br> <br>
+              <h2 class="black-text">Predict your <br>  Heart Disease Now</h2>
+              
+              <br>
+            
+              <a class=" black  waves-effect waves-light btn" href="{% url 'quickpredict' %}"> Quickly Predict </a>  &nbsp; &nbsp;
+              <a class=" black  waves-effect waves-light btn" href="{% url 'signup' %}"> Signup </a> 
+
+            </div>
+    
+           
+            
+    
+    
+          
+          </li>
+        
+        </ul>
+      </div>
+      
+        <!-- Slider 
+        
+      
+      <div class="text">
+
+        <img src="img/back.png" alt="Snow"  style="width:100%; height: auto;">
+        <div class="bottom-left">
+            <div style= "font-size: 24px; "> <b> Predict your <br>Heart Disease Now</b></div>
+        </div>
+      </div>
+            
+      
+      -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+              
+            
+    
+
+       
+              
+        
+      <br>
+                
+            <!--OUR SERVICES-->          
+      
+        
+            <br>
+            <section>
+             
+              
+               
+      
+                 <!--   Icon Section   -->
+      
+                <div class="row width_content" style="width: 90%;" >
+                  <div class="col m4 s12 l4">
+      
+                <div class="icon-block">
+                  <h2 class="center black-text"><i class=" medium material-icons " >devices_other</i></h2>
+                  <h5 class="center"><b>Easy</b></h5>
+      
+                  <p style="margin-left: 15px; margin-right: 15px; text-align: justify;">
+                    Cardio Risk Prediction System (CRPS) has very clean and simple user-friendly interface.
+                    User with simple knowledge of computer and internet can easily navigate through Cardio Risk Prediction System and make maximum 
+                    use of it to their benefit. </p>
+                </div>
+              </div>
+      
+              <div class="col m4 s12 l4">
+      
+                <div class="icon-block">
+                  <h2 class="center black-text"><i class="medium material-icons">dvr</i></h2>
+                  <h5 class="center"><b>Reliable</b></h5>
+      
+                  <p style="margin-left: 15px; margin-right: 15px; text-align: justify;"> Cardio Risk Prediction System (CRPS) is very reliable as 
+                    it uses Machine Learning Technology which predicts the Heart Disease with very good accuracy. 
+                    It may not be hundred percentage accurate but the result will provide the good rough outline about the user’s heart disease.    
+                  </p>
+                </div>
+              </div>
+      
+              <div class="col m4 s12 l4">
+      
+                <div class="icon-block">
+                  <h2 class="center black-text"><i class=" medium material-icons">menu_book</i></h2>
+                  <h5 class="center"><b>Fast</b></h5>
+      
+                  <p style="margin-left: 15px; margin-right: 15px; text-align: justify;">
+                    Cardio Risk Prediction System (CRPS) works very fast. As soon as user enters the required 13 data attributes through a 
+                    form CRPS quickly processes that data and provide the probability of having Heart Disease just few seconds 
+                    </p>
+                </div>
+              </div>
+      
+              
+            </div>
+      
+          
+          <br><br>
+        
+      
+      
+        {% endblock %}

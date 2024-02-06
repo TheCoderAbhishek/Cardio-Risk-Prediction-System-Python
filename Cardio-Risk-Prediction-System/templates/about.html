@@ -1,0 +1,118 @@
+
+ 
+  {% extends 'base_layout.html' %}
+  {% load static %}
+  
+        
+        
+        {% block content %}
+
+<section class="slider sliderv z-depth-3">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'img/about.png' %}"> 
+        <div class="caption center-align">
+          <h3>About </h3>
+          <h5 class="light grey-text text-lighten-3"> Learn even more about CRPS  <br> and how CRPS helps you for FREE.
+          </h5>
+        </div>
+      </li>
+      
+    </ul>
+  </section>
+  
+  <br> <br>
+  
+  
+  <!-- Who we are -->
+  
+  <section>
+    <h2 class="center-align"> What is CRPS?</h2> 
+    </section>
+    <br>
+    <section >
+      <div class="row">
+        <div class="col s4 m4 l4 offset-s4 offset-l4 offset-m4"> <hr></div> <br> <br> <br>
+      </div>
+  
+      <div class="row" style="width: 85%; margin: auto;">
+        <div class="col s12 m6">
+          <img src="{% static 'img/ab1.png' %}"  class="responsive-img">
+  
+        </div>
+        <div class="col s12 m5 offset-m1">
+          <p style="font-size:20px; text-align: justify;">
+            Cardio Risk Prediction System is a user-friendly web-based application 
+            which predicts heart disease using Logistic Regression a Machine Learning Algorithm. 
+            The data extracted from patient includes different 13 parameters like blood pressure, age, sex etc.
+            The result is extracted by processing patient’s dataset and a data of patients to whom we need to predict the chance 
+            of occurrence of a heart disease. 
+
+          </p>
+        </div>
+      </div>
+  
+    </section>
+  <br> <br> <br>
+    <section>
+      <h2 class="center-align"> How can you use CRPS?</h2> 
+      </section>
+      <br>
+      <section >
+        <div class="row">
+          <div class="col s4 m4 l4 offset-s4 offset-l4 offset-m4"> <hr></div> <br> <br> <br>
+        </div>
+        <div class="row" style="width: 85%; margin: auto;">
+          
+          <div class="col s12 m5 ">
+            <p style="font-size:20px; text-align: justify;">
+              Anyone with a device having browser and internet can easily use Cardio Risk Prediction System. If you want to predict heart 
+              disease using CRPS, all you need is to enter accurate value of 13 different attributes that system asks like age, sex, 
+              blood pressure and so on. CRPS will then return the chances of having heart disease in probability which resides from 0-1. 
+              In addition to that, if you want to save data for future purpose and want guidance on what to do next, you can simply sign
+               up to the system which provides all those features.   
+            </p>
+            </div>
+            <div class="col s12 m6 offset-m1">
+              <img src="{% static 'img/ab2.png' %}"  class="responsive-img">
+        </div>
+      </section> 
+
+      <br> <br> <br> <br> 
+        
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+              
+            
+    
+
+       
+              
+        
+    
+          
+          {% endblock %}

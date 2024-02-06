@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRPS</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style> 
+    .text {
+  position: relative;
+ 
+  color: black;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 400px;
+  left: 150px;
+}
+ </style>
+
+
+
+
+
+</head>
+<body>
+    
+
+    <div class="navbar-fixed">
+        <nav class="black">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo">Cardio Risk Prediction System</a>
+              <a href="" data-target="mobile-nav" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down hover_backcolor">
+               
+             
+              
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                {% if user.is_authenticated %}
+                <a class=" white black-text waves-effect waves-dark btn  modal-trigger" href="{% url 'signout' %}"><b>SIGN OUT </b></a>
+                {% else %}
+                <a class=" white black-text waves-effect waves-dark btn  modal-trigger" href="/signin"><b>SIGN IN </b></a>
+                {% endif %}
+               
+              
+    
+    
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <ul id="mobile-nav" class="sidenav">
+        <li><a href="about.html">AboutUs</a></li>
+        <li><a href="contact.html">ContactUs</a></li>
+        <a class="black white-text waves-effect waves-light btn" style="margin-left: 27px; margin-top: 7px;">SIGN IN</a>
+    
+
+
+
+    
+         
+            
+    </ul>
+
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+    <section> 
+      
+        <footer class=" hide-on-small-only black page-footer">
+          <div class="" style=" width: 90%; margin: auto;">
+            <div class="row">
+              <div class="col  s12 m6 l3 ">
+                <h5 class="white-text">CRPS</h5>
+                <p class="grey-text text-lighten-4">Cardio Risk Prediction System (CRPS) is a user-friendly web-based application which predicts heart disease using 
+                    Machine Learning algorithm (ML). </p>
+              </div>
+              <div class="  col l2 m6 s12 offset-l1 ">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+               <li><a class="grey-text text-lighten-3" href="#!">Privacy</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Signin</a></li>
+                </ul>
+              </div>
+              <div class="col l2 m6 s12  ">
+                  <h5 class="white-text">Contacts</h5>
+                  <ul>
+                  <li>Pune, Maharashtra, India</li>
+                  <li>system.cardio.risk@gmail.com</li>
+                  <li>+91-9423404199</li>
+              </ul>     
+              </div>
+  
+              <div class=" col l3 m6 s12 offset-l1 ">
+                  <h5 class="white-text">Visit Us</h5>
+                  <br>
+                  <a href="https://www.youtube.com/channel/UCIrvcrFMOFnXhtnLPpjJuGw" target="_blank"> <i style="color: white; margin: 5px 10px;"  class="fab fa-youtube-square fa-2x"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"> <i style="color: white; margin: 5px 10px;" class="fab fa-facebook-square fa-2x"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"> <i style="color: white; margin: 5px 10px;" class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://www.twitter.com/" target="_blank"> <i style="color: white; margin: 5px 10px;" class="fab fa-twitter-square fa-2x"></i> </a>
+  
+              </div>
+            </div>
+            <hr>
+          
+          
+          <div class="footer-copyright">
+          
+          
+            ©  CRPS All Rights Reserved
+            
+          
+          </div>
+      </div>
+        </footer>
+  
+        <footer class=" hide-on-med-and-up black page-footer">
+          <div class="" style=" width: 90%; margin: auto;">
+            <div class="center-align row">
+              <div class="col  s12 m6 l3 ">
+                <h5 class="white-text">HDPS</h5>
+                <p class="grey-text text-lighten-4">Heart Disease Prediction System (HDPS) is a user-friendly web-based application which predicts heart disease using 
+                    Machine Learning algorithm (ML). </p>
+              </div>
+              <div class="  col l2 m6 s12 offset-l1 ">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Privacy</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Signin</a></li>
+                </ul>
+              </div>
+              <div class="col l2 m6 s12  ">
+                  <h5 class="white-text">Contacts</h5>
+                  <ul>
+                  <li>Pune, Maharashtra, India</li>
+                  <li>system.cardio.risk@gmail.com</li>
+                  <li>+91-9423404199</li>
+              </ul>     
+              </div>
+  
+              <div class=" col l3 m6 s12 offset-l1 ">
+                  <h5 class="white-text">Visit Us</h5>
+                  
+              <a href="https://www.youtube.com/channel/UCIrvcrFMOFnXhtnLPpjJuGw" target="_blank"> <i style="color: white; margin: 5px 10px;" class="fab fa-youtube-square fa-2x"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"> <i style="color: white; margin: 5px 10px;" class="fab fa-facebook-square fa-2x"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"> <i style="color: white; margin: 5px 10px;" class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://www.twitter.com/" target="_blank"> <i style="color: white; margin: 5px 10px;" class="fab fa-twitter-square fa-2x"></i> </a>
+  
+              </div>
+            </div>
+            <hr>
+          
+          
+          <div class=" footer-copyright">
+          
+     
+            ©  CRPS All Rights Reserved
+            
+         
+          </div>
+      </div>
+        </footer>
+  
+      </section>
+  
+  
+ <!--  Scripts-->
+ <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://kit.fontawesome.com/9478bf204b.js" crossorigin="anonymous"></script>
+         
+ <script src="{% static 'js/materialize.js' %}"></script>
+ <script src="{% static 'js/init.js' %}"></script>
+
+
+
+
+</body>
+
+
+
+
+</html>

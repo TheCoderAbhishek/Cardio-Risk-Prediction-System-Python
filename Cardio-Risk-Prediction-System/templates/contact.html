@@ -1,0 +1,176 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+      
+      
+      {% block content %}
+<section class="slider sliderb z-depth-3">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'img/contact.png' %}"> 
+        <div class="caption center-align">
+          <h3>Contact Us</h3>
+          <h5 class="light grey-text text-lighten-3"> Stay connected with CRPS for <br> feedbacks and enqueries.
+          </h5>
+        </div>
+      </li>
+      
+    </ul>
+  </section>
+  
+  <br> <br> 
+  
+  
+  
+  <section>
+    <h2 class="center-align"> Get In Touch</h2> 
+    </section>
+    <br>
+    <section >
+      <div class="row">
+        <div class="col s4 m4 l4 offset-s4 offset-l4 offset-m4"> <hr></div> <br> <br> <br>
+      </div>
+  
+      <!-- CONTACT CARDS -->
+      
+      <div style= "margin:auto; width: 90%; ">
+      <div class="row" >
+        <div class="col s12 m4">  <br>  
+          <div class="card hoverable grey darken-4 white-text ">  
+            <div class="card-content center ">
+              <i class=" medium material-icons">email</i>
+              <h5> <b>Email</b> </h5>
+              <h6 > <b>system.cardio.risk@gmail.com</b> </h6> <br>
+              <p>You can directly email hdps for meaasages, feedbacks and other enquires </p>
+            </div>
+            <div class="card-action">
+             
+            </div>
+             
+          </div>
+        </div>
+  
+        <div class="col s12 m4"> 
+          <div class="card hoverable  blue-grey darken-4 white-text  ">  
+            <div class="card-content center "> <br>
+              <i class=" medium material-icons">location_on</i>
+              <h5> <b>Location</b> </h5>
+              <h6 > <b>Pune, Maharashtra, India</b> </h6> <br>
+              <p>CRPS is online based Cardio Risk Prediction System operating from Pune, Maharashtra, India</p>
+            </div> <br> 
+            <div class="card-action">
+             
+            </div>
+             
+          </div>
+        </div>
+  
+        <div class="col s12 m4"> <br> 
+          <div class="card hoverable grey darken-4 white-text  ">  
+            <div class="card-content center ">
+              <i class=" medium material-icons">call</i>
+              <h5> <b>Phone</b> </h5>
+              <h6> <b>+91-9423404199</b> </h6> <br>
+              <p>You can directly call us on this number for instant responses. </p>
+            </div>
+            <div class="card-action">
+             
+            </div>
+             
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+  
+    </section>
+  <br>  
+  <section>
+    <h2 class="center-align"> Send Message and Feedback</h2> 
+    </section>
+    <br>
+    <section>
+      <div class="row">
+        <div class="col s4 m4 l4 offset-s4 offset-l4 offset-m4"> <hr></div> <br> <br> <br>
+      </div>
+  
+  
+      <!-- Contact form -->
+  
+  
+    <div class="row container">
+      <form class="col s12" method="POST"> 
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate" name="name">
+            <label for="icon_prefix">Name</label>
+            <span class="helper-text"data-error="Wrong" data-success="Right">Enter your Name here</span>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" class="validate" name="email" required>
+            <label for="email">Email</label>
+            <span class="helper-text" data-error="Wrong" data-success="Right">  Enter your Email here</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">subject</i>
+            <textarea id="title1" class="materialize-textarea validate" type="text" name="title1"></textarea>
+            <label for="title1">Title</label>
+            <span class="helper-text" data-error="Wrong" data-success="Right">Enter your Title here</span>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">message</i>
+            <textarea id="textarea2" class="materialize-textarea validate" data-length="300" type="text" name="message"></textarea>
+            <label for="textarea2">Message</label>
+            <span class="helper-text" data-error="Wrong" data-success="Right">Enter your Message here</span>
+          </div>
+        </div>
+        
+        {% csrf_token %}
+        <button class=" black btn waves-effect waves-light" type="submit" name="action"  > Submit
+          <i class="material-icons right">send</i>
+        </button>
+  
+      </form>
+        
+          
+    </div>
+   
+          
+  
+  </section>
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <br>
+      
+      
+      
+              
+            
+    
+
+       
+              
+        
+    {% endblock %}
